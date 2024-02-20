@@ -56,12 +56,9 @@ const myStudentNumberLastTwoDigits = 885491506;
 
 const myStudent = new Student(myFirstName, myLastName, myStudentNumberLastTwoDigits);
 
-
 const lastTwoDigits = myStudent.getStudentNumberLastTwoDigits();
 
-
 const comparisonResult = myStudent.firstName.length >= lastTwoDigits ? "Name length is greater or equal to last two digits of student number" : "Name length is less than last two digits of student number";
-
 
 myStudent.printFullName();
 console.log("Last Two Digits of Student Number:", lastTwoDigits);
