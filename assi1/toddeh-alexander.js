@@ -28,38 +28,50 @@
 ✅ 14.Upload both files on canvas.
 */
 
+/*1*/
 class Student {
     constructor(firstName, lastName, studentNumber) {
+        /*2*/
         this.firstName = firstName;
+        /*3*/
         this.lastName = lastName;
+        /*4*/
         this.studentNumber = studentNumber;
     }
-
-    printFullName() {
-        console.log(`${this.firstName} ${this.lastName}`);
-    }
-
-    getStudentNumberLastTwoDigits() {
-        const lastTwoDigits = this.studentNumber % 100;
-        //I needed to add this if statment to make sure that the ID number was presented properly if the last two digits were less than 10. I was having an issue where it was only printing '6' instead of '06' in my case particularly.
-        if(lastTwoDigits < 10) {
-            return "0" + lastTwoDigits;
-        } else {
-            return lastTwoDigits;
-        }
-    }    
 }
 
+/*5*/
+Student.prototype.printFullName = function() {
+    console.log(`${this.firstName} ${this.lastName}`);
+}
+
+/*6*/
+Student.prototype.getStudentNumberLastTwoDigits = function() {
+    const lastTwoDigits = this.studentNumber % 100;
+    //I needed to add the if statment to make sure that the ID number was presented properly if the last two digits were less than 10. I was having an issue where it was only printing '6' instead of '06' in my case particularly.
+    if(lastTwoDigits < 10) {
+        return "0" + lastTwoDigits;
+    } else {
+        return lastTwoDigits;
+    }
+};
+
+/*7*/
 const myFirstName = "Toddeh";
 const myLastName = "Alexander";
-const myStudentNumberLastTwoDigits = 885491506;
+const myStudentNumber = 885491506;
+const myStudent = new Student(myFirstName, myLastName, myStudentNumber);
 
-const myStudent = new Student(myFirstName, myLastName, myStudentNumberLastTwoDigits);
+/*8*/
+myStudent.printFullName();
 
+/*9*/
 const lastTwoDigits = myStudent.getStudentNumberLastTwoDigits();
 
-const comparisonResult = myStudent.firstName.length >= lastTwoDigits ? "Name length is greater or equal to last two digits of student number" : "Name length is less than last two digits of student number";
+/*10*/ //console.log("Full Name Length:", fullNameLength);
+const fullNameLength = (myStudent.firstName+myStudent.lastName).length;
+const comparisonResult = (fullNameLength >= lastTwoDigits) ? "Full Name length is greater or equal to last two digits of student number" : "Full Name length is less than last two digits of student number";
 
-myStudent.printFullName();
+/*11*/
 console.log("Last Two Digits of Student Number:", lastTwoDigits);
 console.log("Comparison Result:", comparisonResult);
