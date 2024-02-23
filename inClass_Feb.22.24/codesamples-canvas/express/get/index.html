@@ -1,0 +1,24 @@
+<html>
+<title> Cat story generator </title>
+<body bgcolor=lightblue>
+<h1>Would you like to hear a cat story? Provide the information below!</h1><br>
+
+<h3>
+<form action="/catstory" method="GET">
+            <label for="catname">Your cat's name:</label>
+            <input type="text" name="catname" placeholder="Cat's name:" /><br>
+
+            <label for="email">Select your cat's sex</label><br>
+       	    <input type="radio" name="catsex" value="boy" checked> Male<br>
+            <input type="radio" name="catsex" value="girl"> Female<br>
+            <input type="radio" name="catsex" value="other"> Other <br>
+	
+            <label for="catbreed">Your cat's breed:</label>
+            <input type="text" name="catbreed" placeholder="Cat's breed" /><br><br>
+
+            <input type="submit" value="Tell me a cat story!" />
+
+</form>
+</h3>
+</body>
+</html>
