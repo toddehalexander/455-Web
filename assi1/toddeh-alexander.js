@@ -5,7 +5,7 @@
 
 ✅ 3.lastName: Represents the last name of the student.
 
-✅ 4.studentNumber: Represents the student number.
+✅ 4.studentNumber: Represents the student number. 
 
 ✅ 5.Add a method printFullName to the prototype of the Student class that prints the full name of the student.
 
