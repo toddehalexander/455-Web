@@ -27,7 +27,7 @@
 
 ✅ 14.Upload both files on canvas.
 */
-
+ 
 /*1*/
 class Student {
     constructor(firstName, lastName, studentNumber) {
