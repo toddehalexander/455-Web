@@ -1,0 +1,39 @@
+<html>
+<title> Welcome your private journal </title>
+<body bgcolor=yellow>
+
+<h1> Welcome to your mostly private journal. Jot down your most private thoughts and save them.
+They will be kept absolutely mostly private.
+</h1> 
+<div>
+<h2> If you have an account, please login here: </h1>
+<form action="http://localhost:3000/login" method="POST">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+
+    <label for="pass">Password (8 characters minimum):</label>
+    <input type="password" id="pass" name="password"
+           minlength="8" required>
+
+	<input type="submit" value="Sign in">
+</form>
+</div>	
+	
+<div>
+<h2> No account? Create one here! </h1>
+<form action="http://localhost:3000/create" method="POST">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+
+    <label for="pass">Password (8 characters minimum):</label>
+    <input type="password" id="pass" name="password"
+           minlength="8" required>
+
+	<input type="submit" value="Create">
+</form>
+</div>	
+<hr>
+<h1> Find your friends! The following people also use this awesome website </h1>
+	
+</body>
+</html>
