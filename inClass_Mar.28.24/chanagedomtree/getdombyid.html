@@ -1,0 +1,27 @@
+<html>
+<title> Change DOM Tree Demo</title>
+<body bgcolor=lightblue>
+<h1 id="myHeader1">Hello world!</h1>
+<h1 id="myHeader2">Hello world!</h1>
+<input type="text" id="myInput" placeholder="Enter new text here">
+<script>
+
+// Changes the HTML of the h1 tag with id of myHeader
+function changeDOM()
+{
+    // Get the value from the input field
+    var inputValue = document.getElementById("myInput").value;
+    
+    // Get a handle to the object representing the h1
+    // tag with id of "myHeader1" and "myHeader2"
+    var ourHeader1 = document.getElementById("myHeader1");
+    var ourHeader2 = document.getElementById("myHeader2");
+    
+    // Change the HTML of the tag
+    ourHeader1.innerHTML = inputValue;
+    ourHeader2.innerHTML = inputValue;
+}
+</script>
+<button onClick="changeDOM()">Click me!</button>
+</body>
+</html>
