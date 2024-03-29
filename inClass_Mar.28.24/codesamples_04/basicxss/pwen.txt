@@ -1,1 +1,0 @@
-window.location='https://blog.rootshell.be/wp-content/uploads/2014/03/pwn3d2.jpg
