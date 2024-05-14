@@ -3,7 +3,7 @@ const fs = require('fs');
 function readFile(callback) {
     fs.readFile('file.txt', 'utf8', (err, data) => {
         callback(null, data);
-    });
+    }); 
 }
 
 function writeFile(fileName, content, callback) {
